@@ -1,8 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
-// import applyConverters from 'axios-case-converter';
-// import RequestInterceptor from './RequestInterceptor';
-// x'import ResponseInterceptor from './ResponseInterceptor';
+import dotenv from 'dotenv'
+dotenv.config()
 
 const config = {
   baseURL: process.env.VUE_APP_API_BASE_URL,
@@ -13,7 +12,7 @@ const config = {
 };
 
 // /* eslint-disable */
-
+console.log(config)
 const _axios = axios.create(config);
 
 Plugin.install = function(Vue) {
