@@ -13,21 +13,26 @@
                 v-model="search"
                 label="Search"
                 filled
-                @input="searchUser"
+                @input="searchByName"
               )
       
 
 </template>
 
 <script>
-  // import { mapMutations } from 'vuex'
-
+  import { UserActions } from '@/mixins/actions/index'
   export default {
+    mixins: [UserActions],
     data() {
       return {
         search: undefined,
         message: 'Welcome'
       }
+    },
+    methods: {
+      searchByName(user) {
+        this.getUser(user)
+      },
     }
   }
 </script>

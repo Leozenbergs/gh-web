@@ -1,19 +1,11 @@
 <template lang="pug">
   v-app
-    welcome
-
+    v-content
+      router-view
 </template>
 
 <script>
-import Welcome from './components/Welcome';
-
 export default {
-  components: {
-    Welcome,
-  },
-
-  data: () => ({
-    //
-  }),
+  name: 'App',
 };
 </script>
