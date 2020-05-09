@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
+import './plugins/axios/axios';
 import router from './router.js'
 import store from './router'
 import Vuex from 'vuex';
