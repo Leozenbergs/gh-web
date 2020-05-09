@@ -13,12 +13,15 @@
                 v-model="search"
                 label="Search"
                 filled
+                @input="searchUser"
               )
       
 
 </template>
 
 <script>
+  // import { mapMutations } from 'vuex'
+
   export default {
     data() {
       return {
